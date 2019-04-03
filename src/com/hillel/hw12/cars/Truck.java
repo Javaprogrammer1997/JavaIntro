@@ -1,7 +1,8 @@
-package com.hillel.hw11.cars;
+package com.hillel.hw12.cars;
 
 
-import com.hillel.hw11.implement.Car;
+import com.hillel.hw12.implement.Car;
+import com.hillel.hw12.interfaces.CarInter;
 
 public class Truck extends Car {
     private int loadCapacity;

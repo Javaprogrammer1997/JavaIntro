@@ -1,6 +1,6 @@
-package com.hillel.hw11.implement;
+package com.hillel.hw12.implement;
 
-import com.hillel.hw11.interfaces.CarInter;
+import com.hillel.hw12.interfaces.CarInter;
 
 public class Car implements CarInter {
 
@@ -10,15 +10,14 @@ public class Car implements CarInter {
         private int maxSpeed;
 
 
-        public Car(String mark, int price, int fuelConsumption, int maxSpeed) {
-            this.mark = mark;
-            this.price = price;
-            this.fuelConsumption = fuelConsumption;
-            this.maxSpeed = maxSpeed;
+    public Car(String mark, int price, int fuelConsumption, int maxSpeed) {
+        this.mark = mark;
+        this.price = price;
+        this.fuelConsumption = fuelConsumption;
+        this.maxSpeed = maxSpeed;
+    }
 
-        }
-
-        public String getMark() {
+    public String getMark() {
             return mark;
         }
 

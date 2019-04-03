@@ -1,5 +1,5 @@
-package com.hillel.hw11.cars;
-import com.hillel.hw11.implement.Car;
+package com.hillel.hw12.cars;
+import com.hillel.hw12.implement.Car;
 
 public class MilitaryVehicles extends Car {
     private int LevelOfDestruction;

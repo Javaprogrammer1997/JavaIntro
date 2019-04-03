@@ -1,7 +1,7 @@
-package com.hillel.hw11.cars;
-import com.hillel.hw11.implement.Car;
+package com.hillel.hw12.cars;
+import com.hillel.hw12.implement.Car;
 
-public class PassengerCar extends Car{
+public class PassengerCar extends Car {
     private int numberOfPassengers;
 
     public PassengerCar(String mark, int price, int fuelConsumption, int maxSpeed, int numberOfPassengers) {

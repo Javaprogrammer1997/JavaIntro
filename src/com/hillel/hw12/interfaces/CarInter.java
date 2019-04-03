@@ -1,4 +1,4 @@
-package com.hillel.hw11.interfaces;
+package com.hillel.hw12.interfaces;
 
 public interface CarInter {
     String getMark();
