@@ -1,9 +1,7 @@
-package com.hillel.hw12.interfaces;
+package com.hillel.hw13.interfaces;
 
 public interface CarInter {
-    String getMark();
 
-    void setMark(String mark);
 
     int getPrice();
 
@@ -16,6 +14,10 @@ public interface CarInter {
     int getMaxSpeed();
 
     void setMaxSpeed(int maxSpeed);
+
+    default String toFileFormat() {
+        return "";
+    }
 
 
 }

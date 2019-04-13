@@ -1,7 +1,7 @@
-package com.hillel.hw12.implement;
+package com.hillel.hw13.implement;
 
-import com.hillel.hw12.exception.SearchCarForSpeedException;
-import com.hillel.hw12.interfaces.TaxiParkInter;
+import com.hillel.hw13.exception.SearchCarForSpeedException;
+import com.hillel.hw13.interfaces.TaxiParkInter;
 
 import java.util.Arrays;
 
@@ -12,7 +12,7 @@ public class TaxiPark implements TaxiParkInter {
         this.taxiPark = taxiPark;
     }
 
-    public int getcoastOfTaxiPark(){
+    public int getcoastOfTaxiPark() {
         int coast = 0;
 
         for (int i = 0; i < this.taxiPark.length; i++) {
@@ -21,8 +21,8 @@ public class TaxiPark implements TaxiParkInter {
         return coast;
     }
 
-    public Car[] getsearchCarsForSpeed(int minSpeed, int maxSpeed) throws SearchCarForSpeedException  {
-        if(minSpeed < 0 || maxSpeed < 0)
+    public Car[] getsearchCarsForSpeed(int minSpeed, int maxSpeed) throws SearchCarForSpeedException {
+        if (minSpeed < 0 || maxSpeed < 0)
             throw new SearchCarForSpeedException(minSpeed, maxSpeed);
 
         Car[] searchCar = null;
@@ -61,8 +61,8 @@ public class TaxiPark implements TaxiParkInter {
 
     @Override
     public String toString() {
-        return "TaxiParkInter{" +
-                "taxiPark = " + Arrays.toString(taxiPark) +
-                '}';
+        return
+                "TaxiPark = " + Arrays.toString(taxiPark);
+
     }
 }

@@ -1,8 +1,8 @@
-package com.hillel.hw12.interfaces;
+package com.hillel.hw13.interfaces;
 
-import com.hillel.hw12.exception.SearchCarForSpeedException;
+import com.hillel.hw13.exception.SearchCarForSpeedException;
 
-import com.hillel.hw12.implement.Car;
+import com.hillel.hw13.implement.Car;
 
 public interface TaxiParkInter {
 
