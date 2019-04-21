@@ -1,4 +1,4 @@
-package com.hillel.hw13.exception;
+package com.hillel.hw14.exception;
 
 public class SearchCarForSpeedException extends Exception{
     private int min;

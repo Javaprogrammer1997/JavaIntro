@@ -1,12 +1,15 @@
-package com.hillel.hw13.storage.impl;
+package com.hillel.hw14.storage.impl;
 
-import com.hillel.hw13.cars.MilitaryVehicles;
-import com.hillel.hw13.cars.PassengerCar;
-import com.hillel.hw13.cars.Truck;
-import com.hillel.hw13.implement.Car;
-import com.hillel.hw13.storage.CarsStorage;
+import com.hillel.hw14.cars.MilitaryVehicles;
+import com.hillel.hw14.cars.PassengerCar;
+import com.hillel.hw14.cars.Truck;
+import com.hillel.hw14.implement.Car;
+import com.hillel.hw14.storage.CarsStorage;
 
 import java.io.*;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.StringJoiner;
 
 
@@ -25,28 +28,28 @@ public class FileCarsStorage implements CarsStorage {
         this.outputFileName = fileName;
     }
 
-    public Car[] readCars() {
+    public List<Car> readCars() {
 
         try (FileInputStream reader = new FileInputStream(inputFileName)) {
             String fileString = CreateString(reader);
 
             String[] carStrings = fileString.split(";" + System.lineSeparator());
 
-            Car[] cars = new Car[carStrings.length];
+            List<Car> cars = new LinkedList<Car>();
 
             for (int i = 0; i < carStrings.length; i++) {
                 String[] carProperties = carStrings[i].split(",");
                 switch (carProperties[0]) {
                     case "PassengerCar":
-                        cars[i] = new PassengerCar(carProperties);
+                        cars.add(new PassengerCar(carProperties));
                         break;
 
                     case "Truck":
-                        cars[i] = new Truck(carProperties);
+                        cars.add(new Truck(carProperties));
                         break;
 
                     case "MilitaryVehicles":
-                        cars[i] = new MilitaryVehicles(carProperties);
+                        cars.add(new MilitaryVehicles(carProperties));
                         break;
                 }
             }
@@ -56,7 +59,7 @@ public class FileCarsStorage implements CarsStorage {
             e.printStackTrace();
         }
 
-        return new Car[0];
+        return Collections.emptyList();
     }
 
     private String CreateString(FileInputStream reader) throws IOException {
@@ -66,7 +69,7 @@ public class FileCarsStorage implements CarsStorage {
     }
 
 
-    public void writeCars(Car[] cars) {
+    public void writeCars(List<Car> cars) {
         try (FileOutputStream writer = new FileOutputStream(outputFileName)) {
             StringJoiner sj = new StringJoiner(";" + System.lineSeparator());
             for (Car car : cars) {

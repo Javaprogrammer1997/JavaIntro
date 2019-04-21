@@ -1,6 +1,6 @@
-package com.hillel.hw13.implement;
+package com.hillel.hw14.implement;
 
-import com.hillel.hw13.interfaces.CarInter;
+import com.hillel.hw14.interfaces.CarInter;
 
 public class Car implements CarInter {
 

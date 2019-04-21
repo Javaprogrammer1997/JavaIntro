@@ -1,20 +1,20 @@
-package com.hillel.hw13.runner;
+package com.hillel.hw14.runner;
 
-import com.hillel.hw13.exception.SearchCarForSpeedException;
-import com.hillel.hw13.implement.*;
-import com.hillel.hw13.interfaces.TaxiParkInter;
-import com.hillel.hw13.storage.CarsStorage;
-import com.hillel.hw13.storage.impl.FileCarsStorage;
+import com.hillel.hw14.implement.*;
+import com.hillel.hw14.interfaces.TaxiParkInter;
+import com.hillel.hw14.storage.CarsStorage;
+import com.hillel.hw14.storage.impl.FileCarsStorage;
 
-import java.util.Arrays;
+
+
+import java.util.List;
 
 public class MainClass {
 
     public static void main(String[] args) {
         CarsStorage storage = new FileCarsStorage("input.txt", "output.txt");
 
-        Car[] cars = storage.readCars();
-
+        List<Car> cars = storage.readCars();
 
         TaxiParkInter park = new TaxiPark(cars);
 

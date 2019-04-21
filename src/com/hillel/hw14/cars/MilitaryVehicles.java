@@ -1,6 +1,6 @@
-package com.hillel.hw13.cars;
+package com.hillel.hw14.cars;
 
-import com.hillel.hw13.implement.Car;
+import com.hillel.hw14.implement.Car;
 
 
 public class MilitaryVehicles extends Car {
